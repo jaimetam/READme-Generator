@@ -3,42 +3,10 @@
 
 const fs = require('fs');
 const inquirer = require("inquirer");
-
-const generateREADME = ({ title, Description, installation, Usage, Contributing, Test, github, email }) => 
-`
-# ${title}
+const  generateMarkdown = require("./utils/generateMarkdown")
 
 
-# Description
-${Description}
-
-
-## installation 
-${installation}
-
-## Usage
-${Usage}
-
-## Contributing
-${Contributing}
-
-## Test
-${Test}
-
-## Questions
- if you have any questions here is my github and email
- -${github}
- -${email}
-
-
-## Link
-
-## N/A License Please refer to the LICENSE in the repo
-
-`;
-
-
-
+ const generateReadMe = ()  =>{
 inquirer
   .prompt([
     {
@@ -85,7 +53,7 @@ inquirer
       },
   ])
   .then((answers) => {
-    const content = generateREADME(answers);
+    const content = generateMarkdown(answers);
     fs.writeFile('README.md', content, err => {
         if (err) {
           console.error(err);
@@ -97,9 +65,8 @@ inquirer
   .catch((error) => {
     console.log(error);
   });
-
+ };
 
 
 // TODO: Create a function to write README file
-function init() {}
-init();
+generateReadMe();
