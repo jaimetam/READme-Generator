@@ -6,7 +6,7 @@ this project is able to generate a profesional README file while interacting wit
 
 ## installation 
 no instalation required
-chek package file for dependencis 
+check package file for dependencis 
 
 ## Usage
 it is use to create a readme file with a tamplate 
