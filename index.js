@@ -15,7 +15,7 @@ inquirer
     {
       type: "input",
       message: "Can you give me a Description of your project ",
-      name: "Description",
+      name: "description",
     },
     {
       type: "input",
