@@ -25,18 +25,18 @@ inquirer
     {
       type: "input",
       message: "how is your project used",
-      name: "Usage",
+      name: "usage",
     },
     {
       type: "input",
       message: "how can some one else contribute to this project ",
-      name: "Contributing",
+      name: "contributing",
     },
 
      {
         type: "input",
         message: "mention tests that can be executed withe code examples ",
-        name: "Test",
+        name: "test",
       },
 
       {
@@ -47,7 +47,7 @@ inquirer
       {
         type: "input",
         message: "What is your Email ?",
-        name: "Email",
+        name: "email",
       },
   ])
   .then((answers) => {
